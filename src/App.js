@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+// import FeatureList from './FeatureList';
+// import BuildSummary from './BuildSummary';
+// import Total from './Total';
 
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
