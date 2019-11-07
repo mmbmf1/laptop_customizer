@@ -4,7 +4,9 @@ import slugify from 'slugify';
 
 class FeatureList extends Component {
     render() {
+       
         const USCurrencyFormat = this.props.USCurrencyFormat;
+
         const features = Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             const options = this.props.features[feature].map(item => {

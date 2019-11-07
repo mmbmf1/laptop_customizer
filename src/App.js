@@ -45,7 +45,6 @@ class App extends Component {
     });
   };
   render() {
-      console.log(this.state.selected)
     return (
       <div className="App">
         <header>
@@ -55,7 +54,7 @@ class App extends Component {
           <form className="main__form">
             <h2>Customize your laptop</h2>
             <FeatureList
-                
+                features={this.props.features}
             />
           </form>
           <section className="main__summary">
