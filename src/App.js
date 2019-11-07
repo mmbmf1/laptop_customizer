@@ -42,7 +42,6 @@ class App extends Component {
       selected
     });
   };
-
   render() {
     const features = Object.keys(this.props.features).map((feature, idx) => {
       const featureHash = feature + '-' + idx;
@@ -64,7 +63,6 @@ class App extends Component {
           </div>
         );
       });
-
       return (
         <fieldset className="feature" key={featureHash}>
           <legend className="feature__name">
