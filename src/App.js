@@ -55,6 +55,9 @@ class App extends Component {
             <h2>Customize your laptop</h2>
             <FeatureList
                 features={this.props.features}
+                selected={this.state.selected}
+                USCurrencyFormat={USCurrencyFormat}
+                handleUpdate={this.props.updateFeature}
             />
           </form>
           <section className="main__summary">
