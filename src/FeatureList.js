@@ -7,9 +7,7 @@ class FeatureList extends Component {
     render() {
        
         const USCurrencyFormat = this.props.USCurrencyFormat;
-
         const selected = this.props.selected;
-
         const features = Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             const options = this.props.features[feature].map(item => {
@@ -22,7 +20,7 @@ class FeatureList extends Component {
                     className="feature__option"
                     name={slugify(feature)}
                     checked={item.name === selected[feature].name}
-                    onChange={() => this.props.handleUpdate(feature, item)}
+                    onChange={e => this.props.handleUpdate(e.target.value)}
                   />
                   <label htmlFor={itemHash} className="feature__label">
                     {item.name} ({USCurrencyFormat.format(item.cost)})
@@ -39,7 +37,7 @@ class FeatureList extends Component {
               </fieldset>
             );
           });
-        return(
+        return (
             <div className="featureList">{features}
             </div>
         )

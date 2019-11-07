@@ -57,7 +57,7 @@ class App extends Component {
                 features={this.props.features}
                 selected={this.state.selected}
                 USCurrencyFormat={USCurrencyFormat}
-                handleUpdate={this.props.updateFeature}
+                handleUpdate={(feature, newValue)=>this.updateFeature(feature, newValue)}
             />
           </form>
           <section className="main__summary">
