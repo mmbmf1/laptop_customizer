@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     const features = Object.keys(this.props.features).map((feature, idx) => { //create an array of Features
       const featureHash = feature + '-' + idx;
-      const options = this.props.features[feature].map(item => {//
+      const options = this.props.features[feature].map(item => {//maps all of the items as objects
         const itemHash = slugify(JSON.stringify(item));
         return ( //Feature/Option Component?
           <div key={itemHash} className="feature__item">
