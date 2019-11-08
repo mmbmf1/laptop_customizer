@@ -4,6 +4,7 @@ import slugify from 'slugify';
 
 class FeatureList extends Component {
     
+    
     render() {
        
         const USCurrencyFormat = this.props.USCurrencyFormat;

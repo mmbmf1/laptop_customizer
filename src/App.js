@@ -64,10 +64,10 @@ class App extends Component {
             <h2>Your cart</h2>
             <BuildSummary
                 USCurrencyFormat={USCurrencyFormat}
-                options={this.state.selected} 
+                selected={this.state.selected} 
             />
             <Total 
-                options={this.state.selected} 
+                selected={this.state.selected} 
                 USCurrencyFormat={USCurrencyFormat}
             />
           </section>

@@ -4,12 +4,14 @@ class BuildSummary extends Component {
     render() {
 
         const USCurrencyFormat = this.props.USCurrencyFormat;
-        const options = this.props.options;
+        const selected = this.props.selected;
         
-        const summary = Object.keys(options).map((feature, idx) => {
+        const summary = Object.keys(selected).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
-            const selectedOption = options[feature];
-      
+            const selectedOption = selected[feature];
+
+            console.log(selectedOption.name);
+
             return (
               <div className="summary__option" key={featureHash}>
                 <div className="summary__option__label">{feature} </div>

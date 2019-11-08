@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 class Total extends Component {
     render() {
-        const options = this.props.options;
+        const selected = this.props.selected;
         const USCurrencyFormat = this.props.USCurrencyFormat;
-        const total = Object.keys(options).reduce(
-            (acc, curr) => acc + options[curr].cost,
+        const total = Object.keys(selected).reduce(
+            (acc, curr) => acc + selected[curr].cost,
             0
           );
 
