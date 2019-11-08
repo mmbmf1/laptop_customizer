@@ -9,7 +9,7 @@ class BuildSummary extends Component {
         const summary = Object.keys(selected).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             // console.log(selected);
-            console.log(feature);
+            // console.log(feature);
             const selectedOption = selected[feature];
 
             // console.log(selectedOption);
