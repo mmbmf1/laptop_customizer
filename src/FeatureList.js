@@ -3,10 +3,8 @@ import slugify from 'slugify';
 
 
 class FeatureList extends Component {
-    
-    
+   
     render() {
-       
         const USCurrencyFormat = this.props.USCurrencyFormat;
         const selected = this.props.selected;
         const features = Object.keys(this.props.features).map((feature, idx) => {
