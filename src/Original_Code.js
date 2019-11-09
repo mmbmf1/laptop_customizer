@@ -45,9 +45,13 @@ class App extends Component {
   render() {
     const features = Object.keys(this.props.features).map((feature, idx) => { //create an array of Features
       const featureHash = feature + '-' + idx;
+      //<Feature
+        //feature = {feature}
+        //index = {idx}
+      // />
       const options = this.props.features[feature].map(item => {//maps all of the items as objects
         const itemHash = slugify(JSON.stringify(item));
-        return ( //Feature/Option Component?
+        return ( 
           <div key={itemHash} className="feature__item">
             <input
               type="radio"
@@ -63,7 +67,7 @@ class App extends Component {
           </div>
         );
       });
-      return (//List of Features
+      return (
         <fieldset className="feature" key={featureHash}>
           <legend className="feature__name">
             <h3>{feature}</h3>
@@ -77,7 +81,7 @@ class App extends Component {
       const featureHash = feature + '-' + idx;
       const selectedOption = this.state.selected[feature];
 
-      return (//Summary Component
+      return (
         <div className="summary__option" key={featureHash}>
           <div className="summary__option__label">{feature} </div>
           <div className="summary__option__value">{selectedOption.name}</div>
@@ -93,7 +97,7 @@ class App extends Component {
       0
     );
 
-    return (//App Component
+    return (
       <div className="App">
         <header>
           <h1>ELF Computing | Laptops</h1>

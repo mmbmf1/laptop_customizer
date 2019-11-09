@@ -9,6 +9,10 @@ class FeatureList extends Component {//how can I break this down even further?
         const selected = this.props.selected;
         const features = Object.keys(this.props.features).map((feature, idx) => {
           // console.log(feature);
+
+
+
+          
             const featureHash = feature + '-' + idx;
             const options = this.props.features[feature].map(item => {
               // console.log(item);
